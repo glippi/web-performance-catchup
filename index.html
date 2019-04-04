@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Web Performance: code splitting</title>
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Performance is about retaining users</h2>
+        <p>We want users to interact meaningfully with what we build.</p>
+      </section>
+
+      <section>
+        <h3>Performance plays a major role in the success of any online venture.</h3>
+        <p>Here are some case studies:</p>
+        <ul>
+          <li>Pinterest increased search engine traffic and sign-ups by 15% when they reduced perceived wait times by 40%.</li>
+          <li>COOK increased conversions by 7%, decreased bounce rates by 7%, and increased pages per session by 10% when they reduced average page load time by 850 milliseconds.</li>
+        </ul>
+      </section>
+
+      <section>
+        <p>Here are a couple case studies where low performance had a negative impact on business goals:</p>
+        <ul>
+          <li>The BBC found they lost an additional 10% of users for every additional second their site took to load.</li>
+          <li>DoubleClick by Google found 53% of mobile site visits were abandoned if a page took longer than 3 seconds to load.</li>
+        </ul>
+      </section>
+
+      <section>
+        <blockquote>Spending a long time parsing/compiling code can heavily delay how soon a user can interact with your site. The more JavaScript you send, the longer it will take to parse & compile it before your site is interactive.</blockquote>
+        <p><a href="https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e">The cost of JavaScript</a> (Addy Osmany)</p>
+      </section>
+
+      <section>
+        <h2>Time to Interactive:</h2>
+        <p style="font-style: italic">The Time to Interactive (TTI) metric measures how long it takes a page to become interactive. "Interactive" is defined as the point where:</p>
+        <ul>
+          <li>The page has displayed useful content, which is measured with First Contentful Paint.</li>
+          <li>Event handlers are registered for most visible page elements.</li>
+          <li>The page responds to user interactions within 50 milliseconds.</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>What we can address in our codebase in order to <b>increase</b> performance?</h2>
+      </section>
+
+      <section>
+        <iframe src="https://giphy.com/embed/1iv69b8Yq4H8pr2Ux2" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </section>
+
+      <section>
+        <h2>code splitting:</h2>
+        <p>This <b>webpack</b> feature allows you to split your code into various bundles which can then be loaded on demand or in parallel. It can be used to achieve smaller bundles and control resource load prioritization which, if used correctly, can have a major impact on load time.</p>
+      </section>
+
+      <section>
+        <h3>An ideal metrics:</h3>
+        <ul>
+          <li>90% of JavaScript code should be actually used</li>
+        </ul>
+        <p>opening the <i>code coverage</i> panel in chrome, we can check how much JavaScript is used in the page we are rendering</p>
+      </section>
+
+      <section id="animation">
+        <h3>why we should concern about this?</h3>
+        <p>Tweak the performance of a web page could lead to huge advantage for the business and be able to leverage this knowledge represent a great opportunity for us as a consultancy company</p>
+        <p>Because we care of our craft, and be able to provide only the exact amount of code needed for one page to work is a awesome chance to apply our craft</p>
+      </section>
+
+
+
+
+      <section>
+        <h2>Resources:</h2>
+        <ul>
+          <li><a href="https://developers.google.com/web/fundamentals/performance/why-performance-matters/">https://developers.google.com/web/fundamentals/performance/why-performance-matters</a></li>
+          <li><a href="https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive">https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive</a></li>
+          <li><a href="https://webpack.js.org/guides/code-splitting/#root">https://webpack.js.org/guides/code-splitting/#root</a></li>
+          <li><a href="https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e">https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e</a></li>
+          <li><a href="https://www.youtube.com/watch?v=U8_2WdocS9Q">Sean Larkin meetup</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+      dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
+  </script>
+</body>
+
+</html>
