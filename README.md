@@ -4,7 +4,7 @@ Slides for a very short talk about Web Performance made for one of the great  @[
 
 ## 📑Slides
 
-You can see the slides [here](https://gabrielelippi.github.io/web-performance-catchup/)
+You can see the slides [here](https://glippi.github.io/web-performance-catchup)
 
 ### 💻Dev Area
 
