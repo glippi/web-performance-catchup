@@ -1,10 +1,10 @@
-# 🍔Typescript Learning Burger
+#  :chart_with_upwards_trend: Web Performance Catch-up
 
-Slides for a very short talk about TypeScript made for one of the great learning lunch @[Accurat](https://www.accurat.it)
+Slides for a very short talk about Web Performance made for one of the great  @[Codurance](https://www.codurance.com) catch-up
 
 ## 📑Slides
 
-You can see the slides [here](https://gabrielelippi.github.io/typescript-learning-burger/)
+You can see the slides [here](https://glippi.github.io/web-performance-catchup)
 
 ### 💻Dev Area
 
